@@ -24,7 +24,151 @@
   <link rel="stylesheet" href="css/responsive.css?v=1.0.7">
 </head>
 <body>
+<style>
+  .video {
+    display: block;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 100;
+    cursor: pointer;
+    width: 260px;
+    height: 150px;
+    overflow: hidden;
+    
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+  }
+  .video.close {
+    display: none;
+  }
+  .video-box {
+    width: 260px;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    background: #000000;
+    position: relative;
+    
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+  }
+  .video-box iframe {
+    max-width: 100%;
+    height: auto;
+    pointer-events: none;
+  }
+  .video.full .video-box iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+  }
+  .video:hover {
+    width: 280px;
+    height: 190px;
+  }
+  .video:hover .video-box {
+    width: 280px;
+    height: 160px;
+    border: 2px solid #1B6B84;
+  }
+  .video:hover .video-box__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .video-box.full {
+    
+    width: 560px;
+    height: 315px;
+  }
+  .video-box__btn {
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 101;
+    cursor: pointer;
+  }
+  .video-box__btn:hover {
+    opacity: 0.8;
+  }
+  .video.full,
+  .video.full:hover {
+    width: 560px;
+    height: 315px;
+    z-index: 1001;
+  }
+  .video.full:hover .video-box {
+    width: 100%;
+    height: 100%;
+  }
+  .video.full .video-box {
+    border: 2px solid #1B6B84;
+  }
+  
+  @media (max-width: 575px) {
+    
+    .video.full,
+    .video.full:hover {
+      max-width: calc(100% - 24px);
+    }
+    .video-box.full,
+    .video.full:hover .video-box {
+      max-width: 100%;
+      width: 100%;
+    }
+    
+    .video.full {
+      bottom: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, 50%);
+      -moz-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+      -o-transform: translate(-50%, 50%);
+      transform: translate(-50%, 50%);
+    }
+  }
+</style>
 
+
+<section class="video" id="video">
+  <button type="button" class="video-box__btn" id="video-close">
+    ×
+  </button>
+  <div class="video-box" id="video-box">
+    
+    <iframe id="video-img" src="https://www.youtube.com/embed/701CJokGf-k?mute=1&amp;autoplay=0&amp;controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+  </div>
+</section>
 <header>
   <div class="theme-wrapper header-wrapper">
     <div class="header-wrapper__left">

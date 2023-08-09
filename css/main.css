@@ -943,11 +943,11 @@ footer {
   -ms-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
-  -webkit-transform: translate(-50%, -250%);
-  -moz-transform: translate(-50%, -250%);
-  -ms-transform: translate(-50%, -250%);
-  -o-transform: translate(-50%, -250%);
-  transform: translate(-50%, -250%);
+  -webkit-transform: translate(-50%, -350%);
+  -moz-transform: translate(-50%, -350%);
+  -ms-transform: translate(-50%, -350%);
+  -o-transform: translate(-50%, -350%);
+  transform: translate(-50%, -350%);
   
   display: flex;
 }
