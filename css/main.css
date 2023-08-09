@@ -453,6 +453,8 @@ header {
   background-color: #fff;
   padding: 16px 20px;
   margin-top: 16px;
+  position: relative;
+  overflow: hidden;
 }
 .form-wrapper__headline {
 
@@ -516,7 +518,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: -100px;
+  margin-top: 100px;
+  position: relative;
 }
 .form-content__features {
   display: flex;
@@ -553,9 +556,11 @@ header {
   transform: translateY(-50%);
 }
 .form-content__image {
-  width: 382px;
-  height: 340px;
-  margin-right: 12px;
+  width: 450px;
+  height: 360px;
+  position: absolute;
+  right: -32px;
+  object-fit: contain;
 }
 
 .form-wrapper__box {
